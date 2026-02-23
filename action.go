@@ -26,6 +26,10 @@ type Action struct {
 	callback  CompletionCallback
 }
 
+func (a Action) RawValues() common.RawValues {
+	return a.rawValues
+}
+
 // ActionMap maps Actions to an identifier.
 type ActionMap map[string]Action
 
